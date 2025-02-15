@@ -33,26 +33,32 @@
         <h3>Courses</h3>
         @foreach ($student->courses as $course)
             <div>
+                <label for="courses[{{ $course->id }}][academic_year]">AY:</label>
+                <input type="text" style="width: 100px;" name="courses[{{ $course->id }}][academic_year]" value="{{ $course->academic_year }}" required>
+
+                <label for="courses[{{ $course->id }}][semester]">Semester:</label>
+                <input type="text" style="width: 50px;" name="courses[{{ $course->id }}][semester]" value="{{ $course->semester }}" required>
+
                 <label for="courses[{{ $course->id }}][course_no]">Course No:</label>
-                <input type="text" name="courses[{{ $course->id }}][course_no]" value="{{ $course->course_no }}" required>
+                <input type="text" style="width: 100px;" name="courses[{{ $course->id }}][course_no]" value="{{ $course->course_no }}" required>
 
                 <label for="courses[{{ $course->id }}][course_name]">Course Name:</label>
-                <input type="text" name="courses[{{ $course->id }}][course_name]" value="{{ $course->course_name }}" required>
+                <input type="text" style="width: 400px;" name="courses[{{ $course->id }}][course_name]" value="{{ $course->course_name }}" required>
 
                 <label for="courses[{{ $course->id }}][credit_hours]">Credit Hours:</label>
-                <input type="number" name="courses[{{ $course->id }}][credit_hours]" value="{{ $course->credit_hours }}" required>
+                <input type="number" style="width: 50px;" name="courses[{{ $course->id }}][credit_hours]" value="{{ $course->credit_hours }}" required>
 
                 <label for="courses[{{ $course->id }}][grade]">Grade:</label>
-                <input type="text" name="courses[{{ $course->id }}][grade]" value="{{ $course->grade }}" required>
+                <input type="text" style="width: 50px;" name="courses[{{ $course->id }}][grade]" value="{{ $course->grade }}" required>
 
                 <label for="courses[{{ $course->id }}][points]">Points:</label>
-                <input type="number" step="0.1" name="courses[{{ $course->id }}][points]" value="{{ $course->points }}" required>
+                <input type="number" step="0.1" style="width: 50px;" name="courses[{{ $course->id }}][points]" value="{{ $course->points }}" required>
 
                 <label for="courses[{{ $course->id }}][note]">Note:</label>
-                <input type="text" name="courses[{{ $course->id }}][note]" value="{{ $course->note }}">
+                <input type="text" style="width: 50px;" name="courses[{{ $course->id }}][note]" value="{{ $course->note }}">
 
                 <label for="courses[{{ $course->id }}][result]">Result:</label>
-                <input type="text" name="courses[{{ $course->id }}][result]" value="{{ $course->result }}" required>
+                <input type="text" style="width: 50px;" name="courses[{{ $course->id }}][result]" value="{{ $course->result }}" required>
             </div>
         @endforeach
 

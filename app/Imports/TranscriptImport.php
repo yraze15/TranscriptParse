@@ -94,6 +94,7 @@ class TranscriptImport implements ToCollection, WithStartRow
                     'credit_hours' => $row[2], // Column C (Credit Hours)
                     'grade' => $row[3], // Column D (Grade)
                     'note' => $row[5] ?? null, // Column F (Note)
+                    'points' => $row[4], // Column E (Points)
                     'result' => $row[6], // Column G (Result)
                 ]);
 
